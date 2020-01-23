@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Android-testSuite" parallel="tests" thread-count="2">
+
+    <!-- below is lying settings for emulators-->
+
+    <test name="Test-Nexus">
+        <parameter name="deviceName" value="nexus10"/>
+        <parameter name="platformVersion" value="10.0"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <classes>
+            <class name="tests.android.SkipTestsAndroid"/>
+        </classes>
+    </test>
+
+    <test name="Test-Pixel">
+        <parameter name="deviceName" value="pixel10"/>
+        <parameter name="platformVersion" value="10.0"/>
+        <parameter name="udid" value="emulator-5556"/>
+        <classes>
+            <class name="tests.android.SkipTestsAndroid"/>
+        </classes>
+    </test>
+
+</suite>
+        <!--<class name="tests.pages.android.SkipTestsAndroid">-->
+        <!--<methods>-->
+        <!--<include name="123"/>-->
+        <!--</methods>-->
+        <!--</class>-->
